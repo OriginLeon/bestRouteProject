@@ -29,7 +29,7 @@ public class RouteRestController {
     private ConsoleService consoleService;
 
     @ApiOperation(value = "Find cheapest route for input origin and destination",
-            response = ResponseEntity.class)
+            response = TravelModel.class)
     @PostMapping("/best")
     public ResponseEntity<TravelModel> bestRoute(@RequestBody RouteModel routeModel) {
         try {
@@ -44,7 +44,7 @@ public class RouteRestController {
     }
 
     @ApiOperation(value = "Add new route to datasource",
-            response = ResponseEntity.class)
+            response = String.class)
     @PostMapping("/add")
     public ResponseEntity addRoute(@RequestBody PaidRouteModel paidRouteModel) throws IllegalArgumentException {
         try {
