@@ -70,19 +70,3 @@ Pela interface Rest é possível realizar a mesma consulta anterior com um resul
 também fazer adição de novas Rotas com seu respectivo valor.
 Verificação dos padrões de entrada e saída da API, assim como também o teste da mesma ficam disponíveis na documentação [Swagger](http://localhost:8080/swagger-ui.html)
 
-
-
-## Recomendações ##
-Para uma melhor fluides da nossa conversa, atente-se aos seguintes pontos:
-
-* Envie apenas o código fonte,
-* Estruture sua aplicação seguindo as boas práticas de desenvolvimento,
-* Evite o uso de frameworks ou bibliotecas externas à linguagem. Utilize apenas o que for necessário para a exposição do serviço,
-* Implemente testes unitários seguindo as boas praticas de mercado,
-* Documentação
-  Em um arquivo Texto ou Markdown descreva:
-  * Como executar a aplicação, FEITO
-  * Estrutura dos arquivos/pacotes,
-  * Explique as decisões de design adotadas para a solução,
-  * Descreva sua APÌ Rest de forma simplificada. FEITO
-
