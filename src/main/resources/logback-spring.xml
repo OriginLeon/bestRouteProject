@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <springProperty scope="context" name="springAppName" source="spring.application.name"/>
+    <property name="LOG_FILE" value="${user.dir}/logger/app.log"/>
+    <include resource=
+                     "org/springframework/boot/logging/logback/defaults.xml" />
+    <include resource=
+                     "org/springframework/boot/logging/logback/console-appender.xml" />
+    <include resource=
+                     "org/springframework/boot/logging/logback/file-appender.xml" />
+
+    <root level="INFO">
+        <appender-ref ref="FILE" />
+        <!-- Console logging turned off by default to improve console functions usability -->
+        <!--
+        <appender-ref ref="CONSOLE" />
+        -->
+    </root>
+</configuration>
