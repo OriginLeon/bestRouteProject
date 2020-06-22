@@ -4,6 +4,7 @@ Um turista deseja viajar pelo mundo pagando o menor preço possível independent
 Esse aplicativo visa facilitar ao nosso turista, escolher a melhor rota para sua viagem.
 As rotas serão carregadas pela aplicação a partir de um arquivo de entrada.
 
+
 ## Exemplo de arquivo de entrada CSV ##
 ```csv
 GRU,BRC,10
@@ -14,6 +15,7 @@ GRU,ORL,56
 ORL,CDG,5
 SCL,ORL,20
 ```
+
 
 ## Arquitetura ##
 Projeto foi construído em Java 11 - Spring Boot.
@@ -29,9 +31,11 @@ A partir de root/src/main/java/com/project/springboot/bestRoute temos:
 Para a parte lógica que processa a melhor rota foi utilizada uma adaptação do [Algoritmo de Dijkstra](https://pt.wikipedia.org/wiki/Algoritmo_de_Dijkstra), aonde os pontos de origem e destino são convertidos em vértices em um grafo com suas respectivas "distâncias" (nesse caso custo), e a partir do processamento do mesmo se dá o resultado esperado de "menor distância". 
 
 
+
 ## Testes Unitários ## 
 Aplicação conta com cobertura bastante completa de teste unitários do Spring realizados com JUnit e Mockito.
 Na construção do projeto os mesmos serão executados garantido a estabilidade da aplicação.
+
 
 
 ## Construção do projeto ##
@@ -41,8 +45,9 @@ Fazer a construção do projeto atravez do Maven Wrapper contido:
 $ ./mvnw clean install
 ```
 
+
 ## Execução do programa ##
-A inicializacao do teste se dará por linha de comando onde o primeiro argumento é o arquivo com a lista de rotas inicial.
+A inicializacao do teste se dará por linha de comando onde o único argumento é o arquivo com a lista de rotas inicial.
 ```shell
 $ java -jar target/bestRoute-1.0.jar input-routes.csv
 ```
@@ -64,6 +69,7 @@ Exemplo:
 Pela interface Rest é possível realizar a mesma consulta anterior com um resultado mais completo e legível no formato Json, e
 também fazer adição de novas Rotas com seu respectivo valor.
 Verificação dos padrões de entrada e saída da API, assim como também o teste da mesma ficam disponíveis na documentação [Swagger](http://localhost:8080/swagger-ui.html)
+
 
 
 ## Recomendações ##
